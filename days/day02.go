@@ -5,15 +5,15 @@ import (
 	"strings"
 )
 
-func (d Days) Day01(input string) (string, string) {
-	moves := day01_parse(input)
-	sol_part1 := day01_part1(moves)
-	sol_part2 := day01_part2(moves)
+func (d Days) Day02(input string) (string, string) {
+	moves := parse(input)
+	sol_part1 := part1(moves)
+	sol_part2 := part2(moves)
 
 	return strconv.Itoa(sol_part1), strconv.Itoa(sol_part2)
 }
 
-func day01_parse(input string) []int64 {
+func parse(input string) []int64 {
 	lines := strings.Split(input, "\n")
 	moves := make([]int64, 0, len(lines))
 
@@ -34,7 +34,7 @@ func day01_parse(input string) []int64 {
 	return moves
 }
 
-func day01_part1(moves []int64) int {
+func part1(moves []int64) int {
 	var dial int64 = 50
 	count := 0
 
@@ -48,7 +48,7 @@ func day01_part1(moves []int64) int {
 	return count
 }
 
-func day01_part2(moves []int64) int {
+func part2(moves []int64) int {
 	var dial int64 = 50
 	count := 0
 	for _, m := range moves {

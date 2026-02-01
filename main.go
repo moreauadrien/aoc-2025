@@ -3,10 +3,12 @@ package main
 import (
 	"flag"
 	"fmt"
-	"github.com/moreauadrien/aoc-2025/days"
 	"os"
 	"path"
 	"reflect"
+	"strings"
+
+	"github.com/moreauadrien/aoc-2025/days"
 )
 
 func main() {
@@ -28,7 +30,7 @@ func main() {
 		panic(err)
 	}
 
-	fc := string(b)
+	fc := strings.Trim(string(b), "\n")
 
 	mn := fmt.Sprintf("Day%02d", *dayPtr)
 
