@@ -1,4 +1,4 @@
-# Advent of Code 2025 — Runner
+# Advent of Code 2025 - Runner
 
 This program runs solutions for Advent of Code 2025 days by reading input from text files and dynamically calling the corresponding methods.
 
